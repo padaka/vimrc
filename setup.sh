@@ -1,4 +1,5 @@
 #!/bin/bash
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 mkdir -p ~/.vim/autoload ~/.vim/bundle; \
 mkdir -p ~/.vim/doc ~/.vim/plugin; \
@@ -29,9 +30,10 @@ mkdir -p ~/.vim/colors
 cp ~/.vim/bundle/vim-colors-solarized/colors/solarized.vim ~/.vim/colors/.
 
 # Update .vimrc
-if [-a ~/.vimrc] 
+if [ -f ~/.vimrc ] 
 then
   mv ~/.vimrc ~/.vimrc_old
 fi
-cp "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/profile.vim"  ~/.vimrc
+cp $DIR/profile.vim  ~/.vimrc
+
 echo "=== COMPLETE! ==="
