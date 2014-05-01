@@ -33,6 +33,5 @@ if [-a ~/.vimrc]
 then
   mv ~/.vimrc ~/.vimrc_old
 fi
-cp "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"/profile.vim \
-  > ~/.vimrc
+cp "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/profile.vim"  ~/.vimrc
 echo "=== COMPLETE! ==="
