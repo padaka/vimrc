@@ -2,6 +2,7 @@ vimrc
 =====
 
 ###Plugins###
+- pathogen
 - supertab
 - ctrlp
 - syntastic
